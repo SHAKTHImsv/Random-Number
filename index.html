@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess Number</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card" align="center">
+    <h1>Guess the Number Between 1 to 10 !</h1>
+    <input placeholder="   Enter any number" id="one">
+    <button onclick="check()">Check</button>
+    <p id="two">Result</p>
+    <p id="score">Score:10</p>
+    </div>
+
+</body>
+</html>
+<script>
+    var random=document.getElementById("one")
+    var number=document.getElementById("two")
+    var rn=Math.floor(Math.random()*10)+1
+    var s=document.getElementById("score")
+    var tot=10
+    function check(){
+        var a=random.value
+        if(rn==a){
+            console.log("right")
+            number.textContent="Right, You Won"
+            alert("You are right")
+        }
+        else{
+            tot=tot-1
+            score.textContent="Score :"+tot
+            number.textContent="Wrong,Try again"
+        }
+
+    }
+
+</script>
